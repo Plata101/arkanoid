@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4lgnckoe808t"
-path="res://.godot/imported/55-Breakout-Tiles.png-8ada2e3ce688db831993411a2f3f3bcc.ctex"
+uid="uid://67esql3bbswu"
+path="res://.godot/imported/ball.png-6d646625baca6299e5b8ec5b1e5166d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/55-Breakout-Tiles.png"
-dest_files=["res://.godot/imported/55-Breakout-Tiles.png-8ada2e3ce688db831993411a2f3f3bcc.ctex"]
+source_file="res://assets/sprites/ball.png"
+dest_files=["res://.godot/imported/ball.png-6d646625baca6299e5b8ec5b1e5166d6.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1o24d0i30ngm"
-path="res://.godot/imported/01-Breakout-Tiles.png-8fda58af6920350ab39ff36349c21c7c.ctex"
+path="res://.godot/imported/brick_blue.png-daaa65e21bef694347bbe03b5b7d8d40.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/01-Breakout-Tiles.png"
-dest_files=["res://.godot/imported/01-Breakout-Tiles.png-8fda58af6920350ab39ff36349c21c7c.ctex"]
+source_file="res://assets/sprites/brick_blue.png"
+dest_files=["res://.godot/imported/brick_blue.png-daaa65e21bef694347bbe03b5b7d8d40.ctex"]
 
 [params]
 

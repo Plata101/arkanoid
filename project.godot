@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Arkanoid"
+run/main_scene="uid://vqu41gihw4nu"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/wakatime/plugin.cfg")
+
+[global_group]
+
+bricks=""

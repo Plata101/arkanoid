@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://bm3pc5ro5ka6f"]
+
+[ext_resource type="Texture2D" uid="uid://b5tg25yxypa0b" path="res://assets/sprites/paddle_default.png" id="1_3xiby"]
+[ext_resource type="Script" uid="uid://d0eo0l8g1yiwg" path="res://scripts/paddle.gd" id="1_y7wee"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7wee"]
+atlas = ExtResource("1_3xiby")
+region = Rect2(0, 0, 485, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mo4dg"]
+atlas = ExtResource("1_3xiby")
+region = Rect2(485, 0, 485, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pacq5"]
+atlas = ExtResource("1_3xiby")
+region = Rect2(970, 0, 485, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kvcsl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7wee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mo4dg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pacq5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y7wee"]
+radius = 16.3615
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mo4dg"]
+size = Vector2(106, 36)
+
+[node name="Paddle" type="CharacterBody2D"]
+script = ExtResource("1_y7wee")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.79686, 0)
+scale = Vector2(0.28125, 0.28125)
+sprite_frames = SubResource("SpriteFrames_kvcsl")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(48.9062, -2)
+scale = Vector2(1.10014, 0.980446)
+shape = SubResource("CircleShape2D_y7wee")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(-50.0938, -2)
+scale = Vector2(1.10014, 0.980446)
+shape = SubResource("CircleShape2D_y7wee")
+
+[node name="top" type="CollisionShape2D" parent="."]
+position = Vector2(-0.09375, 0)
+shape = SubResource("RectangleShape2D_mo4dg")
