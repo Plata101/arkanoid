@@ -1,0 +1,24 @@
+# Godot-specific ignores
+.godot/
+!.godot/user_settings.tres
+!.godot/user_settings.remap
+
+# Mono-specific ignores
+.mono/
+
+# Asset Library-specific ignores
+.import/
+
+# Export templates
+export_presets.cfg
+
+# Generated translations
+*.translation
+
+# User-specific settings
+# Comment out if you want to share them
+# data_*/
+
+# Builds
+build/
+bin/
