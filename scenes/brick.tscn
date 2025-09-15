@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjwm3mnjqoliy"]
+
+[ext_resource type="Script" uid="uid://dprnqgkx3h7jv" path="res://scripts/brick.gd" id="1_5p85m"]
+[ext_resource type="Texture2D" uid="uid://b1o24d0i30ngm" path="res://assets/sprites/brick_blue.png" id="1_awxk8"]
+[ext_resource type="Texture2D" uid="uid://daj2ae1vc30yi" path="res://assets/sprites/brick_blue_dam.png" id="3_mt0q5"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7mekc"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5p85m"]
+size = Vector2(115, 38)
+
+[node name="brick" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 8
+physics_material_override = SubResource("PhysicsMaterial_7mekc")
+script = ExtResource("1_5p85m")
+solid_texture = ExtResource("1_awxk8")
+damagaed_texture = ExtResource("3_mt0q5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_awxk8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["bricks"]]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_5p85m")

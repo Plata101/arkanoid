@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://vqu41gihw4nu"]
+[gd_scene load_steps=4 format=3 uid="uid://vqu41gihw4nu"]
 
 [ext_resource type="PackedScene" uid="uid://bm3pc5ro5ka6f" path="res://scenes/paddle.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://bplroogxcbbit" path="res://scenes/ball.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://bjwm3mnjqoliy" path="res://scenes/brick.tscn" id="3_lnu2h"]
 
 [node name="game" type="Node2D"]
 
@@ -10,3 +11,6 @@ position = Vector2(576, 608)
 
 [node name="ball" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(574, 553)
+
+[node name="brick" parent="." instance=ExtResource("3_lnu2h")]
+position = Vector2(585, 400)

@@ -22,3 +22,10 @@ enabled=PackedStringArray("res://addons/wakatime/plugin.cfg")
 [global_group]
 
 bricks=""
+
+[layer_names]
+
+2d_physics/layer_1="world"
+2d_physics/layer_2="paddle"
+2d_physics/layer_3="bricks"
+2d_physics/layer_4="ball"
