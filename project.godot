@@ -29,3 +29,7 @@ bricks=""
 2d_physics/layer_2="paddle"
 2d_physics/layer_3="bricks"
 2d_physics/layer_4="ball"
+
+[physics]
+
+2d/default_linear_damp=0.0

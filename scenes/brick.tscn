@@ -11,13 +11,13 @@ bounce = 1.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5p85m"]
 size = Vector2(115, 38)
 
-[node name="brick" type="StaticBody2D"]
+[node name="brick" type="StaticBody2D" groups=["bricks"]]
 collision_layer = 4
 collision_mask = 8
 physics_material_override = SubResource("PhysicsMaterial_7mekc")
 script = ExtResource("1_5p85m")
 solid_texture = ExtResource("1_awxk8")
-damagaed_texture = ExtResource("3_mt0q5")
+damaged_texture = ExtResource("3_mt0q5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)

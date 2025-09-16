@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://vqu41gihw4nu"]
+[gd_scene load_steps=6 format=3 uid="uid://vqu41gihw4nu"]
 
 [ext_resource type="PackedScene" uid="uid://bm3pc5ro5ka6f" path="res://scenes/paddle.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://bplroogxcbbit" path="res://scenes/ball.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bjwm3mnjqoliy" path="res://scenes/brick.tscn" id="3_lnu2h"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_lnu2h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
+size = Vector2(465.413, 787.701)
 
 [node name="game" type="Node2D"]
 
@@ -10,7 +15,50 @@
 position = Vector2(576, 608)
 
 [node name="ball" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(574, 553)
+position = Vector2(573, 470)
 
 [node name="brick" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(585, 400)
+position = Vector2(575, 322)
+
+[node name="leftWall" type="StaticBody2D" parent="."]
+position = Vector2(0, 280)
+scale = Vector2(-0.0806969, 1.4406)
+collision_mask = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="leftWall"]
+modulate = Color(0, 0, 0, 1)
+texture = SubResource("NoiseTexture2D_lnu2h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftWall"]
+position = Vector2(12.3921, 1.52588e-05)
+scale = Vector2(1.11829, 0.648595)
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="topWall" type="StaticBody2D" parent="."]
+position = Vector2(557, -0.999992)
+rotation = 1.5708
+scale = Vector2(-0.0806969, 2.8006)
+collision_mask = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="topWall"]
+modulate = Color(0, 0, 0, 1)
+texture = SubResource("NoiseTexture2D_lnu2h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="topWall"]
+position = Vector2(12.3921, 1.52588e-05)
+scale = Vector2(1.11829, 0.648595)
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="rightWall" type="StaticBody2D" parent="."]
+position = Vector2(1153, 279)
+scale = Vector2(-0.0806969, 1.4406)
+collision_mask = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="rightWall"]
+modulate = Color(0, 0, 0, 1)
+texture = SubResource("NoiseTexture2D_lnu2h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rightWall"]
+position = Vector2(12.3921, 1.52588e-05)
+scale = Vector2(1.11829, 0.648595)
+shape = SubResource("RectangleShape2D_lnu2h")
