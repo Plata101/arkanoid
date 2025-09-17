@@ -16,6 +16,13 @@ func _ready():
 
 func _on_body_entered(body):
 	ping_sound.play()
+	
+	
+	
+	if body.is_in_group("paddle"):
+		# --- CLASSIC ARKANOID BOUNCE LOGIC ---
+		print("hit the paddle")
+	
 	# Check if the body the ball hit is in the "bricks" group
 	if body.is_in_group("bricks"):
 		print("brick")

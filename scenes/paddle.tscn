@@ -38,9 +38,11 @@ radius = 16.3615
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mo4dg"]
 size = Vector2(106, 36)
 
-[node name="Paddle" type="CharacterBody2D"]
+[node name="Paddle" type="RigidBody2D" groups=["paddle"]]
 collision_layer = 2
 collision_mask = 8
+freeze = true
+freeze_mode = 1
 script = ExtResource("1_y7wee")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -48,12 +50,12 @@ position = Vector2(-0.79686, 0)
 scale = Vector2(0.28125, 0.28125)
 sprite_frames = SubResource("SpriteFrames_kvcsl")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+[node name="right" type="CollisionShape2D" parent="."]
 position = Vector2(48.9062, -2)
 scale = Vector2(1.10014, 0.980446)
 shape = SubResource("CircleShape2D_y7wee")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+[node name="left" type="CollisionShape2D" parent="."]
 position = Vector2(-50.0938, -2)
 scale = Vector2(1.10014, 0.980446)
 shape = SubResource("CircleShape2D_y7wee")
