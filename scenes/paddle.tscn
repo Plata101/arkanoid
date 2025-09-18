@@ -38,11 +38,9 @@ radius = 16.3615
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mo4dg"]
 size = Vector2(106, 36)
 
-[node name="Paddle" type="RigidBody2D" groups=["paddle"]]
+[node name="Paddle" type="CharacterBody2D" groups=["paddle"]]
 collision_layer = 2
-collision_mask = 8
-freeze = true
-freeze_mode = 1
+collision_mask = 9
 script = ExtResource("1_y7wee")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
