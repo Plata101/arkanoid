@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://vqu41gihw4nu"]
+[gd_scene load_steps=12 format=4 uid="uid://vqu41gihw4nu"]
 
 [ext_resource type="Script" uid="uid://dwjfdw6vp76go" path="res://scripts/game.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bm3pc5ro5ka6f" path="res://scenes/paddle.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://bplroogxcbbit" path="res://scenes/ball.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bjwm3mnjqoliy" path="res://scenes/brick.tscn" id="3_lnu2h"]
 [ext_resource type="AudioStream" uid="uid://cd7opfyenmm2g" path="res://assets/lostLife.mp3" id="5_iywne"]
+[ext_resource type="TileSet" uid="uid://cdk3fwb2m1xvk" path="res://assets/brick_tileset.tres" id="5_p57ef"]
+[ext_resource type="Script" uid="uid://byvw3nm353f1m" path="res://scripts/level_builder.gd" id="5_u5sy4"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_lnu2h"]
 
@@ -14,6 +16,10 @@ size = Vector2(465.413, 787.701)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbhrr"]
 size = Vector2(1290, 207)
 
+[sub_resource type="GDScript" id="GDScript_iywne"]
+script/source = "extends TileMapLayer
+"
+
 [node name="game" type="Node2D"]
 script = ExtResource("1_lbhrr")
 
@@ -22,9 +28,6 @@ position = Vector2(576, 608)
 
 [node name="ball" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(573, 470)
-
-[node name="brick" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(522, 322)
 
 [node name="leftWall" type="StaticBody2D" parent="."]
 position = Vector2(0, 280)
@@ -79,5 +82,15 @@ shape = SubResource("RectangleShape2D_lbhrr")
 
 [node name="lifeLostSound" type="AudioStreamPlayer2D" parent="DeathZone"]
 stream = ExtResource("5_iywne")
+
+[node name="level1" type="Node2D" parent="."]
+position = Vector2(38, 1)
+script = ExtResource("5_u5sy4")
+brick_scene = ExtResource("3_lnu2h")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="level1"]
+tile_map_data = PackedByteArray("AAAFAAMAAwAAAAAAAAANAAMAAwAAAAAAAAAVAAMAAwAAAAAAAAAdAAMAAwAAAAAAAAAlAAMAAwAAAAAAAAAtAAMAAwAAAAAAAAA1AAMAAwAAAAAAAAA9AAMAAwAAAAAAAAAFAAYAAwAAAAEAAAANAAYAAwAAAAEAAAAVAAYAAwAAAAEAAAAdAAYAAwAAAAEAAAANAAkAAwAAAAIAAAAVAAkAAwAAAAIAAAAdAAkAAwAAAAIAAAAlAAYAAwACAAIAAAAlAAkAAwACAAIAAAAtAAkAAwACAAIAAAAtAAYAAwACAAIAAAA1AAYAAwAAAAQAAAA1AAkAAwACAAEAAAA9AAkAAwACAAEAAAA9AAYAAwACAAEAAAA=")
+tile_set = ExtResource("5_p57ef")
+script = SubResource("GDScript_iywne")
 
 [connection signal="body_entered" from="DeathZone" to="." method="_on_death_zone_body_entered"]
