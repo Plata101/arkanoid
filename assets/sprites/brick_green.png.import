@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cideluxsgtdtv"
-path="res://.godot/imported/tiles-sheet.png-486cf5b1d3d67acdcdb105fef905f777.ctex"
+uid="uid://bm0fi0r2qrb1q"
+path="res://.godot/imported/brick_green.png-5338dfe63482f466d3677280cc0bb7b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/tiles-sheet.png"
-dest_files=["res://.godot/imported/tiles-sheet.png-486cf5b1d3d67acdcdb105fef905f777.ctex"]
+source_file="res://assets/sprites/brick_green.png"
+dest_files=["res://.godot/imported/brick_green.png-5338dfe63482f466d3677280cc0bb7b6.ctex"]
 
 [params]
 

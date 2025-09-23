@@ -6,8 +6,8 @@ signal destroyed(points)
 # Create slots in the Inspector to drag your textures into.
 @export var solid_texture: Texture2D
 @export var damaged_texture: Texture2D
+@export var health = 2
 
-var health = 2
 const POINTS = 100
 
 @onready var sprite = $Sprite2D
